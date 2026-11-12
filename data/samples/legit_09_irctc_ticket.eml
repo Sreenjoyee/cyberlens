@@ -1,0 +1,37 @@
+Received: from mail-relay.example.net (mail-relay.example.net [203.0.113.25])
+ by mx.university.ac.in
+Authentication-Results: mx.university.ac.in; spf=pass
+ smtp.mailfrom=irctc.co.in; dkim=pass header.d=irctc.co.in; dmarc=pass
+ header.from=irctc.co.in
+From: IRCTC <ticketadmin@irctc.co.in>
+To: student@university.ac.in
+Subject: Booking confirmation - PNR 4521876390
+Date: Tue, 11 Nov 2025 08:33:20 -0000
+Message-ID: <legit_09_irctc_ticket.eml@cyberlens.sample>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============7783099895106661323=="
+
+--===============7783099895106661323==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Ananya Sharma,
+
+Thank you for booking with IRCTC. Your e-ticket for train 12951 on 02 Decembe=
+r is attached.
+
+Manage your booking: https://www.irctc.co.in
+
+--===============7783099895106661323==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="ETicket_4521876390.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjQKIC0tIGhhcm1sZXNzIEN5YmVyTGVucyB0ZXN0IHBheWxvYWQsIG5vdCBhIHJlYWwg
+cHJvZ3JhbSAtLQogLS0gaGFybWxlc3MgQ3liZXJMZW5zIHRlc3QgcGF5bG9hZCwgbm90IGEgcmVh
+bCBwcm9ncmFtIC0tCiAtLSBoYXJtbGVzcyBDeWJlckxlbnMgdGVzdCBwYXlsb2FkLCBub3QgYSBy
+ZWFsIHByb2dyYW0gLS0KIC0tIGhhcm1sZXNzIEN5YmVyTGVucyB0ZXN0IHBheWxvYWQsIG5vdCBh
+IHJlYWwgcHJvZ3JhbSAtLQo=
+
+--===============7783099895106661323==--

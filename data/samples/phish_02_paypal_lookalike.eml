@@ -1,0 +1,24 @@
+Received: from mail-relay.example.net (mail-relay.example.net [203.0.113.25])
+ by mx.university.ac.in
+Authentication-Results: mx.university.ac.in; spf=softfail
+ smtp.mailfrom=paypa1-security.com; dkim=pass header.d=paypa1-security.com;
+ dmarc=none
+From: PayPal Service <service@paypa1-security.com>
+To: student@university.ac.in
+Subject: Action required: unusual activity on your PayPal account
+Date: Tue, 11 Nov 2025 08:33:20 -0000
+Message-ID: <phish_02_paypal_lookalike.eml@cyberlens.sample>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear user,
+
+We noticed unusual activity on your account. Your account will be limited unt=
+il you verify your account. Click here to verify:
+
+https://paypa1-security.com/verify/account
+
+Failure to verify within 48 hours will result in permanent suspension.
+
+PayPal Security Team

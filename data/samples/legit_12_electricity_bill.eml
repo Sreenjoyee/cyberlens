@@ -1,0 +1,22 @@
+Return-Path: <billing@tatapower.com>
+Received: from mail-relay.example.net (mail-relay.example.net [203.0.113.25])
+ by mx.university.ac.in
+Authentication-Results: mx.university.ac.in; spf=pass
+ smtp.mailfrom=tatapower.com; dkim=pass header.d=tatapower.com; dmarc=pass
+ header.from=tatapower.com
+From: Tata Power <billing@tatapower.com>
+To: student@university.ac.in
+Subject: Your electricity bill for October is ready
+Date: Tue, 11 Nov 2025 08:33:20 -0000
+Message-ID: <legit_12_electricity_bill.eml@cyberlens.sample>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Rahul Verma,
+
+Your bill of Rs 1,842 for October has been generated. Due date: 20 November.
+
+View and pay your bill: https://www.tatapower.com/pay-bill
+
+Tata Power

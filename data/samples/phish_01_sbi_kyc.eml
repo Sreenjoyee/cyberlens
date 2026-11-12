@@ -1,0 +1,44 @@
+Return-Path: <bounce@mailer-host.xyz>
+Received: from mail-relay.example.net (mail-relay.example.net [203.0.113.25])
+ by mx.university.ac.in
+Authentication-Results: mx.university.ac.in; spf=fail
+ smtp.mailfrom=mailer-host.xyz; dkim=none; dmarc=fail
+ header.from=sbi-kyc-update.com
+From: SBI Alerts <alerts@sbi-kyc-update.com>
+To: student@university.ac.in
+Subject: URGENT: Your SBI account will be blocked - update KYC within 24 hours
+Date: Tue, 11 Nov 2025 08:33:20 -0000
+Message-ID: <phish_01_sbi_kyc.eml@cyberlens.sample>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============1960904302508400659=="
+
+--===============1960904302508400659==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Customer,
+
+Your account has been suspended due to incomplete KYC. Update your KYC detail=
+s and link your Aadhaar number and PAN card within 24 hours to avoid permanen=
+t blocking.
+
+Visit https://www.onlinesbi.sbi to update.
+
+State Bank of India
+
+--===============1960904302508400659==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Dear Customer,</p>
+<p>Your account has been suspended due to incomplete KYC. Update your KYC det=
+ails and link your
+Aadhaar number and PAN card <b>within 24 hours</b> to avoid permanent blockin=
+g.</p>
+<p><a href=3D"http://sbi-kyc-update.xyz/onlinesbi/login.php">https://www.onli=
+nesbi.sbi</a></p>
+<p>State Bank of India</p></body></html>
+
+--===============1960904302508400659==--

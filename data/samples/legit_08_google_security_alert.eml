@@ -1,0 +1,24 @@
+Return-Path: <noreply@accounts.google.com>
+Received: from mail-relay.example.net (mail-relay.example.net [203.0.113.25])
+ by mx.university.ac.in
+Authentication-Results: mx.university.ac.in; spf=pass
+ smtp.mailfrom=accounts.google.com; dkim=pass header.d=accounts.google.com;
+ dmarc=pass header.from=accounts.google.com
+From: Google <no-reply@accounts.google.com>
+To: student@university.ac.in
+Subject: Security alert: new sign-in on Windows
+Date: Tue, 11 Nov 2025 08:33:20 -0000
+Message-ID: <legit_08_google_security_alert.eml@cyberlens.sample>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Ananya,
+
+Your Google Account was just signed in to from a new Windows device. If this =
+was you, you don't need to do anything. If not, we'll help you secure your ac=
+count.
+
+Check activity: https://myaccount.google.com/notifications
+
+Google will never ask for your password by email.

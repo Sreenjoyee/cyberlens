@@ -1,0 +1,10 @@
+From: PhonePe Rewards <phonepe.rewards.team@outlook.com>
+To: you@example.com
+Subject: You have won Rs 5,000 cashback!
+
+Hello user,
+
+Congratulations! You have won Rs 5,000 cashback reward. To credit the amount to your bank, reply
+with your UPI PIN and the OTP you receive. Offer valid only for today.
+
+PhonePe Rewards Team

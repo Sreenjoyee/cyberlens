@@ -1,0 +1,14 @@
+From: Acme Corp HR <hr@acmecorp.com>
+To: all-staff@acmecorp.com
+Return-Path: <hr@acmecorp.com>
+Subject: Holiday calendar for 2027
+
+Hello everyone,
+
+The holiday calendar for 2027 has been published on the intranet:
+https://intranet.acmecorp.com/hr/holidays-2027
+
+Please plan your leave accordingly. Reach out to the HR desk if you have questions.
+
+Thanks,
+Human Resources, Acme Corp

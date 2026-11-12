@@ -1,0 +1,35 @@
+Received: from mail-relay.example.net (mail-relay.example.net [203.0.113.25])
+ by mx.university.ac.in
+From: Accounts Receivable <billing@quickinvoice-portal.net>
+To: student@university.ac.in
+Subject: Outstanding invoice #INV-8812 - payment overdue
+Date: Tue, 11 Nov 2025 08:33:20 -0000
+Message-ID: <phish_05_invoice_double_ext.eml@cyberlens.sample>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============3933219746395500510=="
+
+--===============3933219746395500510==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+Please find attached the outstanding invoice for last month. Payment is overd=
+ue; open the attached invoice immediately to avoid legal action.
+
+Regards,
+Accounts Team
+
+--===============3933219746395500510==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Invoice_INV-8812.pdf.exe"
+MIME-Version: 1.0
+
+TVogLS0gaGFybWxlc3MgQ3liZXJMZW5zIHRlc3QgcGF5bG9hZCwgbm90IGEgcmVhbCBwcm9ncmFt
+IC0tCiAtLSBoYXJtbGVzcyBDeWJlckxlbnMgdGVzdCBwYXlsb2FkLCBub3QgYSByZWFsIHByb2dy
+YW0gLS0KIC0tIGhhcm1sZXNzIEN5YmVyTGVucyB0ZXN0IHBheWxvYWQsIG5vdCBhIHJlYWwgcHJv
+Z3JhbSAtLQogLS0gaGFybWxlc3MgQ3liZXJMZW5zIHRlc3QgcGF5bG9hZCwgbm90IGEgcmVhbCBw
+cm9ncmFtIC0tCg==
+
+--===============3933219746395500510==--

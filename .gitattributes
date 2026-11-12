@@ -1,0 +1,2 @@
+# Keep sample emails byte-for-byte identical (their SHA-256 hashes must not change)
+data/samples/** -text

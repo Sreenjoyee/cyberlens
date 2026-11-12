@@ -1,0 +1,37 @@
+Received: from mail-relay.example.net (mail-relay.example.net [203.0.113.25])
+ by mx.university.ac.in
+Authentication-Results: mx.university.ac.in; spf=pass
+ smtp.mailfrom=lms.university.ac.in; dkim=pass header.d=lms.university.ac.in;
+ dmarc=pass header.from=lms.university.ac.in
+From: Course Portal <noreply@lms.university.ac.in>
+To: student@university.ac.in
+Subject: New assignment posted: Cyber Security Fundamentals - Assignment 3
+Date: Tue, 11 Nov 2025 08:33:20 -0000
+Message-ID: <legit_06_lms_assignment.eml@cyberlens.sample>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============1001502243486639189=="
+
+--===============1001502243486639189==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello Ananya,
+
+A new assignment has been posted in Computer and Cyber Security Fundamentals.=
+ The instructions are attached. Submission is due on 25 November.
+
+Open the course: https://lms.university.ac.in/course/csf101
+
+--===============1001502243486639189==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Assignment3_Instructions.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjcKIC0tIGhhcm1sZXNzIEN5YmVyTGVucyB0ZXN0IHBheWxvYWQsIG5vdCBhIHJlYWwg
+cHJvZ3JhbSAtLQogLS0gaGFybWxlc3MgQ3liZXJMZW5zIHRlc3QgcGF5bG9hZCwgbm90IGEgcmVh
+bCBwcm9ncmFtIC0tCiAtLSBoYXJtbGVzcyBDeWJlckxlbnMgdGVzdCBwYXlsb2FkLCBub3QgYSBy
+ZWFsIHByb2dyYW0gLS0KIC0tIGhhcm1sZXNzIEN5YmVyTGVucyB0ZXN0IHBheWxvYWQsIG5vdCBh
+IHJlYWwgcHJvZ3JhbSAtLQo=
+
+--===============1001502243486639189==--

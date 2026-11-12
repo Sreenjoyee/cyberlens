@@ -1,0 +1,32 @@
+Received: from mail-relay.example.net (mail-relay.example.net [203.0.113.25])
+ by mx.university.ac.in
+Authentication-Results: mx.university.ac.in; spf=pass
+ smtp.mailfrom=dropbox-filesharing.net; dkim=fail header.d=dropbox.com;
+ dmarc=fail header.from=dropbox-filesharing.net
+From: Dropbox <no-reply@dropbox-filesharing.net>
+To: student@university.ac.in
+Subject: Shared document: Q3_Financials.pdf
+Date: Tue, 11 Nov 2025 08:33:20 -0000
+Message-ID: <phish_14_dropbox_share.eml@cyberlens.sample>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============6182333604785654591=="
+
+--===============6182333604785654591==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+A document has been shared with you. Sign in to view the document.
+
+--===============6182333604785654591==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>A document has been shared with you via Dropbox.</p>
+<p><a href=3D"https://dropbox-filesharing.net/s/aX9kQ2mPz7LwR4tYb8NcVe1HuJ3oF=
+gD5sKq6ZrT0yWi?login=3Drequired&amp;sid=3D7Hf2Kp9QxZ4mLw8R">View Q3_Financial=
+s.pdf</a></p>
+<p>Sign in to view the document.</p></body></html>
+
+--===============6182333604785654591==--

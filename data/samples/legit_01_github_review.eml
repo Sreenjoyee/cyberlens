@@ -1,0 +1,20 @@
+Return-Path: <noreply@github.com>
+Received: from mail-relay.example.net (mail-relay.example.net [203.0.113.25])
+ by mx.university.ac.in
+Authentication-Results: mx.university.ac.in; spf=pass
+ smtp.mailfrom=github.com; dkim=pass header.d=github.com; dmarc=pass
+ header.from=github.com
+From: GitHub <notifications@github.com>
+To: student@university.ac.in
+Subject: [cyberlens] Review requested on pull request #42
+Date: Tue, 11 Nov 2025 08:33:20 -0000
+Message-ID: <legit_01_github_review.eml@cyberlens.sample>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Priya Nair requested your review on pull request #42: Add URL indicator tests.
+
+View it on GitHub: https://github.com/team-cyberlens/cyberlens/pull/42
+
+You are receiving this because your review was requested.

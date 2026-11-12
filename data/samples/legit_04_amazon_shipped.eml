@@ -1,0 +1,22 @@
+Return-Path: <bounces@amazon.in>
+Received: from mail-relay.example.net (mail-relay.example.net [203.0.113.25])
+ by mx.university.ac.in
+Authentication-Results: mx.university.ac.in; spf=pass smtp.mailfrom=amazon.in;
+ dkim=pass header.d=amazon.in; dmarc=pass header.from=amazon.in
+From: Amazon.in <shipment-tracking@amazon.in>
+To: student@university.ac.in
+Subject: Your Amazon.in order #403-8812345 has shipped
+Date: Tue, 11 Nov 2025 08:33:20 -0000
+Message-ID: <legit_04_amazon_shipped.eml@cyberlens.sample>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello Rahul,
+
+Your package with 'Introduction to Cryptography' has shipped and will arrive =
+on Friday.
+
+Track your package: https://www.amazon.in/gp/your-account/order-history
+
+Thank you for shopping with us.

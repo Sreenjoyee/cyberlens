@@ -1,0 +1,41 @@
+id,subject,from_name,from_email,reply_to,body,attachments,label
+1,Your account access has been restricted,HDFC NetBanking,security@hdfc-netbanking-alerts.com,,"Dear Customer, your account access is restricted due to suspicious login attempts. Verify your identity at http://hdfc-netbanking-alerts.com/secure within 12 hours or your account will be blocked.",,phishing
+2,Mailbox storage full,Mail Administrator,admin@webmail-quota.xyz,,Your mailbox has exceeded its storage limit. Click here to verify your account and restore access: http://webmail-quota.xyz/upgrade?user=you. Failure to verify will result in loss of emails.,,phishing
+3,Aadhaar update mandatory,UIDAI Services,update@uidai-aadhaar-kyc.in,,"Dear citizen, as per new rules you must link your Aadhaar with your mobile. Send your Aadhaar number and the OTP you receive to complete verification. Last date is today.",,phishing
+4,Payment received - action needed,Paytm,paytm.support.desk@gmail.com,,"You have received Rs 9,999 cashback. Enter your UPI PIN on the link to receive money: https://bit.ly/paytm-cb99",,phishing
+5,Re: pending invoice,Vikram Shah,vikram.shah@acme-c0rp.com,payments@vendor-settlements.net,"Hi, as discussed our bank details have changed. Please make the outstanding payment of Rs 2,40,000 to the new bank account below today. Kindly treat as urgent.",,phishing
+6,Purchase request,Anil Kapoor (MD),anil.kapoor.md@yahoo.com,,Are you at your desk? I need you to buy 5 Google Play gift cards for a client. I will reimburse you. Send me the codes asap.,,phishing
+7,Track your package,India Post,tracking@indiapost-delivery.top,,Your package could not be delivered due to incomplete address. Pay a small fee of Rs 25 to reschedule: http://indiapost-delivery.top/pay,,phishing
+8,Document shared with you,OneDrive,share@onedrive-docs-share.com,,A secure document has been shared with you. Sign in with your Microsoft account to view the document: https://onedrive-docs-share.com/view?id=8f3k2,,phishing
+9,Electricity disconnection notice,Electricity Board,eb.officer.notice@gmail.com,,"Dear consumer, your electricity connection will be disconnected tonight at 9:30 pm because your previous bill was not updated. Immediately contact our officer and pay the dues.",,phishing
+10,Job offer - work from home,HR Recruitment,careers@quickjobs-hiring.click,,"Congratulations! You have been selected for a work from home job earning Rs 50,000 per month. Pay the registration fee of Rs 1,500 to confirm your seat.",,phishing
+11,Quotation for your review,Procurement,procure@trade-docs.net,,Please find attached our quotation. Open the document and enable content to view the prices.,Quotation_2026.xlsm,phishing
+12,Fwd: scanned invoice,Scanner,scanner@office-scan.net,,Scanned invoice attached.,Invoice_Scan.pdf.js,phishing
+13,Unusual sign-in activity,Microsoft account team,no-reply@micros0ft-account.com,,We detected unusual sign-in activity on your Microsoft account. Review recent activity and confirm your password here: https://micros0ft-account.com/review,,phishing
+14,Your Netflix membership is on hold,Netflix,info@netflix-membership.support,,We were unable to validate your billing information. Update your card details to restore access: https://netflix-membership.support/billing,,phishing
+15,Refund pending,Amazon,refunds@amazon-refund-centre.com,,"Hello, your refund of Rs 3,450 is pending. Provide your debit card number and CVV to receive the refund within 24 hours.",,phishing
+16,Cyber crime complaint against you,Cyber Cell Delhi Police,cybercell.delhi.police@outlook.com,,"A complaint has been registered against your PAN. To avoid arrest, contact the officer immediately and pay the penalty.",,phishing
+17,Shared file,Dropbox,notify@dropbox.com.file-share.cyou,,You have a new shared file. View it here: https://dropbox.com.file-share.cyou/f/9x2,,phishing
+18,Important update,IT Support,it.support@tech-helpdesk.net,,Please install the attached security update today.,SecurityUpdate.zip,phishing
+19,Salary credited,Payroll,payroll@hrms-portal.net,,Your salary slip is ready. Login to view.,,phishing
+20,Quick favour,Neha,neha.k1987@gmail.com,,"Hi, can you do me a quick favour? Reply as soon as you get this.",,phishing
+21,Lab schedule changed,Prof. Arjun Rao,arjun.rao@university.ac.in,,"Dear students, tomorrow's network security lab moves to Room 204. Please bring your laptops.",,legit
+22,Your Flipkart order is out for delivery,Flipkart,no-reply@flipkart.com,,"Hi Rahul, your order of a USB keyboard is out for delivery today. Track: https://www.flipkart.com/account/orders",,legit
+23,Urgent: server maintenance tonight,IT Services,it-services@university.ac.in,,"Hi all, the university email server will be down for urgent maintenance tonight from 11 pm to 1 am. No action is needed from you.",,legit
+24,Monthly cashback summary,ICICI Bank,statements@icicibank.com,,"Dear Priya, you earned Rs 120 cashback on your credit card this month. View your statement in the iMobile app. ICICI Bank never asks for your OTP or CVV.",,legit
+25,Congratulations on your paper acceptance,Conference Chairs,chairs@indiasec-conf.org,,"Dear Dr. Sharma, congratulations! Your paper has been accepted. Camera-ready instructions: https://indiasec-conf.org/camera-ready",,legit
+26,Minutes of today's meeting,Rohan Gupta,rohan.gupta@acmecorp.com,,"Hi team, attaching the minutes from today's sprint review. Let me know if I missed anything.",Minutes_Sprint12.docx,legit
+27,Your LinkedIn weekly digest,LinkedIn,messages-noreply@linkedin.com,,See who viewed your profile this week and new jobs in Bengaluru. https://www.linkedin.com/feed/,,legit
+28,Password changed,GitHub,noreply@github.com,,"Hi priya-n, the password for your GitHub account was recently changed. If you did this, no further action is needed. If not, please contact support.",,legit
+29,Library book due soon,Central Library,library@university.ac.in,,"Dear member, the book 'Applied Cryptography' is due on 15 November. Renew online at https://library.university.ac.in",,legit
+30,Birthday dinner on Saturday?,Arjun,arjun.mehta88@gmail.com,,"Hey, we're planning dinner for Sana's birthday on Saturday at 8. Are you in?",,legit
+31,Invoice for October hosting,DigitalOcean,support@digitalocean.com,,Your invoice for October is now available. The amount will be charged to your card on file. View invoice: https://cloud.digitalocean.com/account/billing,Invoice_Oct2026.pdf,legit
+32,Webinar: Introduction to Zero Trust,Security Community,events@owasp-pune.org,,Join our free webinar on Zero Trust architecture next Wednesday at 6 pm. Register: https://owasp-pune.org/events/zero-trust,,legit
+33,Leave approved,HR Portal,hr-portal@acmecorp.com,,Your leave request for 18-20 November has been approved by your manager.,,legit
+34,Train ticket cancelled - refund initiated,IRCTC,ticketadmin@irctc.co.in,,Your ticket PNR 2345678901 has been cancelled. A refund of Rs 845 has been initiated to your original payment method.,,legit
+35,Team lunch photos,Sneha,sneha.r@acmecorp.com,,Sharing the photos from yesterday's lunch!,team_lunch.jpg,legit
+36,Weekly assignment reminder,Course Portal,noreply@lms.university.ac.in,,Reminder: Assignment 4 on hashing and digital signatures is due Friday. Submit at https://lms.university.ac.in/course/csf101,,legit
+37,Your Google Drive storage,Google,drive-noreply@google.com,,You've used 80% of your 15 GB storage. Manage storage at https://one.google.com/storage,,legit
+38,Rent receipt,Mr. Desai,desai.properties@gmail.com,,"Hi, received your rent for November. Thanks!",,legit
+39,Final reminder: fee payment deadline,Accounts Office,accounts@university.ac.in,,This is the final reminder that semester fees must be paid by 30 November through the student portal to avoid a late fee.,,legit
+40,Security alert for your account,Instagram,security@mail.instagram.com,,"We noticed a new login from Chrome on Windows near Pune. If this was you, you can ignore this message.",,legit

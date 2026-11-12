@@ -1,0 +1,36 @@
+Received: from mail-relay.example.net (mail-relay.example.net [203.0.113.25])
+ by mx.university.ac.in
+Authentication-Results: mx.university.ac.in; spf=pass smtp.mailfrom=gmail.com;
+ dkim=pass header.d=gmail.com; dmarc=pass header.from=gmail.com
+From: Meera Iyer <meera.iyer93@gmail.com>
+To: student@university.ac.in
+Subject: Goa trip photos!
+Date: Tue, 11 Nov 2025 08:33:20 -0000
+Message-ID: <legit_07_friend_photos.eml@cyberlens.sample>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============5543559451344113111=="
+
+--===============5543559451344113111==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hey!
+
+Attaching a couple of photos from the Goa trip. The rest are in our shared al=
+bum. See you on Monday!
+
+Meera
+
+--===============5543559451344113111==
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="goa_beach.jpg"
+MIME-Version: 1.0
+
+/9j/4CAtLSBoYXJtbGVzcyBDeWJlckxlbnMgdGVzdCBwYXlsb2FkLCBub3QgYSByZWFsIHByb2dy
+YW0gLS0KIC0tIGhhcm1sZXNzIEN5YmVyTGVucyB0ZXN0IHBheWxvYWQsIG5vdCBhIHJlYWwgcHJv
+Z3JhbSAtLQogLS0gaGFybWxlc3MgQ3liZXJMZW5zIHRlc3QgcGF5bG9hZCwgbm90IGEgcmVhbCBw
+cm9ncmFtIC0tCiAtLSBoYXJtbGVzcyBDeWJlckxlbnMgdGVzdCBwYXlsb2FkLCBub3QgYSByZWFs
+IHByb2dyYW0gLS0K
+
+--===============5543559451344113111==--

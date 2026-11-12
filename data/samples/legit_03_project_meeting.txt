@@ -1,0 +1,11 @@
+From: Dr. Kavita Sharma <kavita.sharma@university.ac.in>
+To: cyberlens-team@university.ac.in
+Subject: PBL review meeting on Thursday
+
+Hi team,
+
+Our project review is on Thursday at 11:00 in Lab 3. Please bring the architecture diagram and a
+short demo of the analyzer. Each member should be ready to explain their module.
+
+Best,
+Dr. Kavita Sharma

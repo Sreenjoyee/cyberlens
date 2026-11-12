@@ -1,0 +1,24 @@
+Return-Path: <bounce@securitydigest.io>
+Received: from mail-relay.example.net (mail-relay.example.net [203.0.113.25])
+ by mx.university.ac.in
+Authentication-Results: mx.university.ac.in; spf=pass
+ smtp.mailfrom=securitydigest.io; dkim=pass header.d=securitydigest.io;
+ dmarc=pass header.from=securitydigest.io
+From: The Security Digest <digest@securitydigest.io>
+To: student@university.ac.in
+Subject: This week in security: 5 talks worth watching
+Date: Tue, 11 Nov 2025 08:33:20 -0000
+Message-ID: <legit_05_newsletter.eml@cyberlens.sample>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Ananya,
+
+Here are this week's picks: talks on TLS 1.3, password managers and threat mo=
+delling.
+
+Read online: https://securitydigest.io/issues/142
+Manage preferences: https://securitydigest.io/preferences
+
+Happy reading!

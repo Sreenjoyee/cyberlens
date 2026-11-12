@@ -1,0 +1,36 @@
+Received: from mail-relay.example.net (mail-relay.example.net [203.0.113.25])
+ by mx.university.ac.in
+From: DHL Express <noreply@dhl-parcel-track.icu>
+To: student@university.ac.in
+Subject: DHL: your parcel is on hold - customs fee pending
+Date: Tue, 11 Nov 2025 08:33:20 -0000
+Message-ID: <phish_12_courier_zip.eml@cyberlens.sample>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============4415122397441436673=="
+
+--===============4415122397441436673==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Customer,
+
+Your parcel is on hold at customs. Pay the customs fee of Rs 299 to release i=
+t. Track your shipment: https://tinyurl.com/dhl-track-2026
+
+Shipment details are in the attached file.
+
+DHL Express
+
+--===============4415122397441436673==
+Content-Type: application/zip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Shipment_Details.zip"
+MIME-Version: 1.0
+
+UEsDBCAtLSBoYXJtbGVzcyBDeWJlckxlbnMgdGVzdCBwYXlsb2FkLCBub3QgYSByZWFsIHByb2dy
+YW0gLS0KIC0tIGhhcm1sZXNzIEN5YmVyTGVucyB0ZXN0IHBheWxvYWQsIG5vdCBhIHJlYWwgcHJv
+Z3JhbSAtLQogLS0gaGFybWxlc3MgQ3liZXJMZW5zIHRlc3QgcGF5bG9hZCwgbm90IGEgcmVhbCBw
+cm9ncmFtIC0tCiAtLSBoYXJtbGVzcyBDeWJlckxlbnMgdGVzdCBwYXlsb2FkLCBub3QgYSByZWFs
+IHByb2dyYW0gLS0K
+
+--===============4415122397441436673==--

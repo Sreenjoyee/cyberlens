@@ -1,0 +1,34 @@
+Received: from mail-relay.example.net (mail-relay.example.net [203.0.113.25])
+ by mx.university.ac.in
+From: HR Department <hr-dept@company-docs.top>
+To: student@university.ac.in
+Subject: Scanned document from HR - revised leave policy
+Date: Tue, 11 Nov 2025 08:33:20 -0000
+Message-ID: <phish_06_magic_mismatch.eml@cyberlens.sample>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============0234025217780356860=="
+
+--===============0234025217780356860==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+The revised leave policy is attached as a scanned PDF. All employees must rea=
+d and acknowledge it today.
+
+HR Department
+
+--===============0234025217780356860==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Leave_Policy_Scan.pdf"
+MIME-Version: 1.0
+
+TVqQACAtLSBoYXJtbGVzcyBDeWJlckxlbnMgdGVzdCBwYXlsb2FkLCBub3QgYSByZWFsIHByb2dy
+YW0gLS0KIC0tIGhhcm1sZXNzIEN5YmVyTGVucyB0ZXN0IHBheWxvYWQsIG5vdCBhIHJlYWwgcHJv
+Z3JhbSAtLQogLS0gaGFybWxlc3MgQ3liZXJMZW5zIHRlc3QgcGF5bG9hZCwgbm90IGEgcmVhbCBw
+cm9ncmFtIC0tCiAtLSBoYXJtbGVzcyBDeWJlckxlbnMgdGVzdCBwYXlsb2FkLCBub3QgYSByZWFs
+IHByb2dyYW0gLS0K
+
+--===============0234025217780356860==--

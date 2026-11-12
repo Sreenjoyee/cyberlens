@@ -1,0 +1,20 @@
+Received: from mail-relay.example.net (mail-relay.example.net [203.0.113.25])
+ by mx.university.ac.in
+From: Netflix <billing@netfiix-billing.com>
+To: student@university.ac.in
+Subject: Netflix: payment declined - update your billing
+Date: Tue, 11 Nov 2025 08:33:20 -0000
+Message-ID: <phish_11_netflix_payment.eml@cyberlens.sample>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+We could not process your last payment and your service will be suspended. Pl=
+ease update your credit card number, expiry date and CVV here:
+
+https://www.netflix.com@billing-secure.ru/update
+http://netflix.com.account-update.billing-secure.ru/payment
+
+The Netflix Team

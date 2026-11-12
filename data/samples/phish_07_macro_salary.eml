@@ -1,0 +1,34 @@
+Received: from mail-relay.example.net (mail-relay.example.net [203.0.113.25])
+ by mx.university.ac.in
+From: Finance Team <payroll@salary-update.click>
+To: student@university.ac.in
+Subject: Salary revision letter 2026 - confidential
+Date: Tue, 11 Nov 2025 08:33:20 -0000
+Message-ID: <phish_07_macro_salary.eml@cyberlens.sample>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============7382059053114655005=="
+
+--===============7382059053114655005==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Employee,
+
+Your salary revision letter is attached. The document is protected - click 'E=
+nable Content' after opening to view your revised salary.
+
+Finance & Payroll
+
+--===============7382059053114655005==
+Content-Type: application/vnd.ms-word.document.macroEnabled.12
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Salary_Revision_2026.docm"
+MIME-Version: 1.0
+
+UEsDBCAtLSBoYXJtbGVzcyBDeWJlckxlbnMgdGVzdCBwYXlsb2FkLCBub3QgYSByZWFsIHByb2dy
+YW0gLS0KIC0tIGhhcm1sZXNzIEN5YmVyTGVucyB0ZXN0IHBheWxvYWQsIG5vdCBhIHJlYWwgcHJv
+Z3JhbSAtLQogLS0gaGFybWxlc3MgQ3liZXJMZW5zIHRlc3QgcGF5bG9hZCwgbm90IGEgcmVhbCBw
+cm9ncmFtIC0tCiAtLSBoYXJtbGVzcyBDeWJlckxlbnMgdGVzdCBwYXlsb2FkLCBub3QgYSByZWFs
+IHByb2dyYW0gLS0K
+
+--===============7382059053114655005==--

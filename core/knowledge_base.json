@@ -1,0 +1,580 @@
+{
+  "concepts": {
+    "cia_triad": {
+      "name": "CIA Triad",
+      "description": "The three core security goals. Confidentiality keeps data secret from unauthorised parties, Integrity keeps data accurate and unaltered, Availability keeps systems and data usable when needed. Every attack ultimately harms at least one of them.",
+      "consequence": "Loss of confidentiality, integrity or availability",
+      "key_controls": ["Encryption (C)", "Hashing & digital signatures (I)", "Backups & redundancy (A)"]
+    },
+    "threats_vulnerabilities": {
+      "name": "Threats & Vulnerabilities",
+      "description": "A threat is a potential cause of harm (the phisher); a vulnerability is a weakness it exploits. Phishing mostly exploits HUMAN vulnerabilities (trust, fear, greed, haste) rather than software bugs. Risk = likelihood x impact.",
+      "consequence": "Human / technical vulnerability exploited",
+      "key_controls": ["Security awareness training", "Phishing simulations", "Verification procedures"]
+    },
+    "authentication": {
+      "name": "Authentication",
+      "description": "Authentication verifies that someone is who they claim to be. Phishing attacks it twice: it steals the victim's authenticators (password, OTP) and it fakes the sender's identity, because plain SMTP does not authenticate the From address.",
+      "consequence": "Account takeover",
+      "key_controls": ["Multi-factor authentication (preferably phishing-resistant, e.g. FIDO2 keys)", "SPF, DKIM and DMARC on email domains", "Password managers (autofill refuses fake domains)"]
+    },
+    "access_control": {
+      "name": "Access Control",
+      "description": "Access control decides what an authenticated identity may do. Once an attacker holds valid credentials, access control cannot tell them from the real user, so the attacker inherits all of that user's privileges.",
+      "consequence": "Unauthorised access to systems & data",
+      "key_controls": ["Least privilege", "Conditional access / login anomaly detection", "Prompt credential revocation"]
+    },
+    "network_security": {
+      "name": "Network Security",
+      "description": "How traffic reaches its destination. Phishing links abuse URL and DNS structure (lookalike domains, IP hosts, redirects, shorteners) to send the victim to attacker infrastructure, and plain HTTP leaves traffic unencrypted.",
+      "consequence": "Traffic interception / malicious redirection",
+      "key_controls": ["Secure email gateway & URL rewriting", "DNS filtering / web proxy", "HTTPS everywhere (HSTS)"]
+    },
+    "endpoint_security": {
+      "name": "Endpoint Security",
+      "description": "Protection of the user's device. Malicious attachments try to execute code on the endpoint (executables, scripts, macros) to install malware such as info-stealers, remote access trojans or ransomware.",
+      "consequence": "Malware / ransomware infection",
+      "key_controls": ["Anti-malware / EDR", "Block macros from the internet", "Application allow-listing", "Show file extensions"]
+    },
+    "cryptography_integrity": {
+      "name": "Cryptography & Integrity",
+      "description": "Cryptographic hashes and signatures let us detect modification and prove origin. DKIM signs emails, TLS encrypts links, and SHA-256 fingerprints identify malicious files. Failures here mean origin or content cannot be trusted.",
+      "consequence": "Undetected tampering / spoofed origin",
+      "key_controls": ["DKIM signing", "TLS certificates", "File hash verification (SHA-256)", "Digital signatures on documents"]
+    },
+    "privacy": {
+      "name": "Privacy & Data Protection",
+      "description": "Protection of personally identifiable information (PII) such as Aadhaar, PAN, bank and card details. Phishing harvests PII for identity theft and fraud. India's Digital Personal Data Protection Act, 2023 governs how such data must be protected.",
+      "consequence": "Identity theft & personal data exposure",
+      "key_controls": ["Never share OTP/PIN/CVV", "Data minimisation", "Masked Aadhaar / virtual ID"]
+    },
+    "cybercrime_law": {
+      "name": "Cybercrime & Indian IT Act",
+      "description": "Phishing is a crime. The IT Act 2000 covers unauthorised access and damage (S.43), computer-related offences (S.66), identity theft (S.66C) and cheating by personation (S.66D). Victims in India can report at cybercrime.gov.in or call the 1930 helpline.",
+      "consequence": "Cyber offence: fraud / financial loss",
+      "key_controls": ["Report at cybercrime.gov.in / helpline 1930", "Preserve evidence (original email + hashes)", "Inform your bank immediately"]
+    }
+  },
+  "mitre": {
+    "T1566": {
+      "name": "Phishing",
+      "tactic": "Initial Access",
+      "url": "https://attack.mitre.org/techniques/T1566/"
+    },
+    "T1566.001": {
+      "name": "Phishing: Spearphishing Attachment",
+      "tactic": "Initial Access",
+      "url": "https://attack.mitre.org/techniques/T1566/001/"
+    },
+    "T1566.002": {
+      "name": "Phishing: Spearphishing Link",
+      "tactic": "Initial Access",
+      "url": "https://attack.mitre.org/techniques/T1566/002/"
+    },
+    "T1598": {
+      "name": "Phishing for Information",
+      "tactic": "Reconnaissance",
+      "url": "https://attack.mitre.org/techniques/T1598/"
+    },
+    "T1598.003": {
+      "name": "Phishing for Information: Spearphishing Link",
+      "tactic": "Reconnaissance",
+      "url": "https://attack.mitre.org/techniques/T1598/003/"
+    },
+    "T1204.001": {
+      "name": "User Execution: Malicious Link",
+      "tactic": "Execution",
+      "url": "https://attack.mitre.org/techniques/T1204/001/"
+    },
+    "T1204.002": {
+      "name": "User Execution: Malicious File",
+      "tactic": "Execution",
+      "url": "https://attack.mitre.org/techniques/T1204/002/"
+    },
+    "T1656": {
+      "name": "Impersonation",
+      "tactic": "Defense Evasion",
+      "url": "https://attack.mitre.org/techniques/T1656/"
+    },
+    "T1036": {
+      "name": "Masquerading",
+      "tactic": "Defense Evasion",
+      "url": "https://attack.mitre.org/techniques/T1036/"
+    },
+    "T1036.007": {
+      "name": "Masquerading: Double File Extension",
+      "tactic": "Defense Evasion",
+      "url": "https://attack.mitre.org/techniques/T1036/007/"
+    },
+    "T1059.005": {
+      "name": "Command and Scripting Interpreter: Visual Basic",
+      "tactic": "Execution",
+      "url": "https://attack.mitre.org/techniques/T1059/005/"
+    },
+    "T1583.001": {
+      "name": "Acquire Infrastructure: Domains",
+      "tactic": "Resource Development",
+      "url": "https://attack.mitre.org/techniques/T1583/001/"
+    },
+    "T1078": {
+      "name": "Valid Accounts",
+      "tactic": "Initial Access / Persistence",
+      "url": "https://attack.mitre.org/techniques/T1078/"
+    },
+    "T1027": {
+      "name": "Obfuscated Files or Information",
+      "tactic": "Defense Evasion",
+      "url": "https://attack.mitre.org/techniques/T1027/"
+    },
+    "T1557": {
+      "name": "Adversary-in-the-Middle",
+      "tactic": "Credential Access",
+      "url": "https://attack.mitre.org/techniques/T1557/"
+    }
+  },
+  "it_act": {
+    "43": {
+      "title": "Penalty and compensation for damage to computer, computer system, etc.",
+      "description": "Unauthorised access, downloading data, introducing a virus/contaminant or damaging a computer system makes the person liable to pay compensation to the victim."
+    },
+    "66": {
+      "title": "Computer related offences",
+      "description": "Doing any act referred to in Section 43 dishonestly or fraudulently is a criminal offence: imprisonment up to 3 years and/or fine up to Rs 5 lakh."
+    },
+    "66C": {
+      "title": "Punishment for identity theft",
+      "description": "Fraudulently using another person's password, electronic signature or other unique identification feature: imprisonment up to 3 years and fine up to Rs 1 lakh."
+    },
+    "66D": {
+      "title": "Punishment for cheating by personation by using computer resource",
+      "description": "Cheating by pretending to be another person or organisation using a computer resource or communication device: imprisonment up to 3 years and fine up to Rs 1 lakh."
+    }
+  },
+  "threats": {
+    "Credential Phishing": {
+      "description": "Tricks the victim into entering login credentials or OTPs on a fake page controlled by the attacker.",
+      "recommendations": ["Do not click the link; open the official site by typing its address yourself.", "If you already entered a password, change it immediately and enable MFA.", "Report the email to your IT/security team or the bank's official phishing address."]
+    },
+    "Malicious Attachment": {
+      "description": "Delivers malware through an attached file that runs code when opened.",
+      "recommendations": ["Do not open or download the attachment.", "If opened, disconnect from the network and run a full anti-malware scan; inform IT.", "Share the attachment's SHA-256 hash (not the file) with your security team."]
+    },
+    "Financial Fraud/Scam": {
+      "description": "Advance-fee, lottery, refund or KYC scams that aim to steal money or banking/identity details.",
+      "recommendations": ["Never pay a 'fee' to receive a prize or refund.", "Never share OTP, UPI PIN, CVV or Aadhaar/PAN by email or phone.", "If money was lost, call the 1930 cyber-crime helpline and your bank immediately."]
+    },
+    "Impersonation/BEC": {
+      "description": "Business Email Compromise / impersonation: the attacker poses as a boss, colleague, supplier or official to request money or data.",
+      "recommendations": ["Verify the request through a separate, known channel (call the person on a number you already have).", "Never change payment details based on an email alone.", "Check the real sender address and Reply-To before replying."]
+    },
+    "Likely Safe": {
+      "description": "No significant indicators were found.",
+      "recommendations": ["No strong phishing indicators were found, but stay cautious with unexpected requests.", "When in doubt, verify with the sender through a known channel."]
+    }
+  },
+  "indicators": {
+    "CNT_URGENCY": {
+      "concepts": {
+        "threats_vulnerabilities": "Exploits a human vulnerability: fear and time pressure suppress careful thinking, so the victim skips verification.",
+        "cia_triad": "Pressure increases the chance that the victim discloses confidential information or performs a harmful action."
+      },
+      "vulnerability": {
+        "type": "human",
+        "description": "Fear, anxiety and time pressure"
+      },
+      "mitre": ["T1566"],
+      "it_act": ["66D"],
+      "recommendations": ["Slow down: real organisations do not close accounts within hours by email.", "Verify the claim by contacting the organisation through its official website or app."]
+    },
+    "CNT_CREDENTIAL_REQUEST": {
+      "concepts": {
+        "authentication": "Targets the victim's authenticator (password/login). A stolen password defeats single-factor authentication completely.",
+        "access_control": "With valid credentials the attacker passes access control as the victim and inherits all their permissions.",
+        "cia_triad": "Confidentiality is lost the moment credentials are disclosed; integrity follows if the attacker changes data.",
+        "cybercrime_law": "Using someone else's password is identity theft under IT Act S.66C."
+      },
+      "vulnerability": {
+        "type": "human",
+        "description": "Trust in an official-looking request"
+      },
+      "mitre": ["T1598.003", "T1078"],
+      "it_act": ["66C", "43"],
+      "recommendations": ["Never enter credentials from an email link; use a bookmark or the official app.", "Enable multi-factor authentication on all important accounts.", "Use a password manager - it will not autofill on a fake domain."]
+    },
+    "CNT_PERSONAL_DATA": {
+      "concepts": {
+        "privacy": "Requests PII (Aadhaar, PAN, card, CVV, OTP, PIN) whose disclosure enables identity theft; protected under India's DPDP Act 2023.",
+        "authentication": "An OTP or PIN is an authentication factor; sharing it lets the attacker authorise transactions as you.",
+        "cia_triad": "Directly breaches the confidentiality of personal and financial data.",
+        "cybercrime_law": "Misusing someone's identity data is punishable under IT Act S.66C; the deception itself under S.66D."
+      },
+      "vulnerability": {
+        "type": "human",
+        "description": "Lack of awareness that banks/government never ask for OTP/PIN/CVV"
+      },
+      "mitre": ["T1598"],
+      "it_act": ["66C", "66D"],
+      "recommendations": ["Never share OTP, UPI PIN, CVV, card number or Aadhaar/PAN over email or phone.", "Banks and UIDAI never ask for these details by email.", "If shared, call your bank to block the card/account and dial 1930."]
+    },
+    "CNT_REWARD_BAIT": {
+      "concepts": {
+        "threats_vulnerabilities": "Exploits greed and curiosity - a human vulnerability - with an offer that is too good to be true.",
+        "cybercrime_law": "Fake lottery/prize schemes are cheating by personation (S.66D)."
+      },
+      "vulnerability": {
+        "type": "human",
+        "description": "Greed, curiosity, excitement"
+      },
+      "mitre": ["T1598"],
+      "it_act": ["66D"],
+      "recommendations": ["You cannot win a lottery you never entered.", "Never pay a fee to claim a prize or refund."]
+    },
+    "CNT_PAYMENT_REQUEST": {
+      "concepts": {
+        "cia_triad": "Fraudulent changes of payment or bank details corrupt the integrity of financial records and transactions.",
+        "threats_vulnerabilities": "Exploits trust in normal business processes (invoices, fees) - typical of BEC and advance-fee fraud.",
+        "cybercrime_law": "Obtaining money by deception using email is cheating by personation (S.66D) and a computer-related offence (S.66)."
+      },
+      "vulnerability": {
+        "type": "human",
+        "description": "Trust in routine payment processes; no out-of-band verification"
+      },
+      "mitre": ["T1656"],
+      "it_act": ["66D", "66"],
+      "recommendations": ["Verify any payment or bank-detail change by phone using a known number.", "Use a two-person approval process for transfers.", "Gift-card payment requests are almost always scams."]
+    },
+    "CNT_GENERIC_GREETING": {
+      "concepts": {
+        "threats_vulnerabilities": "Indicates a mass, untargeted campaign: the sender does not know the recipient, unlike a real service provider."
+      },
+      "vulnerability": {
+        "type": "human",
+        "description": "Not noticing the lack of personalisation"
+      },
+      "mitre": ["T1566"],
+      "it_act": [],
+      "recommendations": ["Your bank or service usually addresses you by name; be suspicious of 'Dear Customer'."]
+    },
+    "CNT_AUTHORITY_IMPERSONATION": {
+      "concepts": {
+        "authentication": "The sender claims an identity (bank, government, CEO) that is not authenticated - email From fields can be forged.",
+        "threats_vulnerabilities": "Exploits obedience to authority, a well-known human vulnerability.",
+        "cybercrime_law": "Pretending to be a bank, government body or executive is cheating by personation under IT Act S.66D."
+      },
+      "vulnerability": {
+        "type": "human",
+        "description": "Obedience to authority"
+      },
+      "mitre": ["T1656"],
+      "it_act": ["66D"],
+      "recommendations": ["Verify the request through the organisation's official channel.", "Government and banks do not threaten arrest or demand payment by email."]
+    },
+    "URL_HTTP_INSECURE": {
+      "concepts": {
+        "network_security": "HTTP traffic is sent in plain text and can be intercepted or modified by anyone on the path (adversary-in-the-middle).",
+        "cryptography_integrity": "No TLS means no encryption, no server certificate and no integrity protection for the page or the data you submit.",
+        "cia_triad": "Credentials typed into an HTTP page lose confidentiality; the page content has no integrity guarantee."
+      },
+      "vulnerability": {
+        "type": "technical",
+        "description": "Missing transport encryption (TLS)"
+      },
+      "mitre": ["T1557"],
+      "it_act": [],
+      "recommendations": ["Never enter credentials on a page that is not HTTPS.", "Note: HTTPS alone does not mean safe - phishing sites also use free certificates."]
+    },
+    "URL_IP_HOST": {
+      "concepts": {
+        "network_security": "The link bypasses DNS names, avoiding domain reputation filters and hiding who operates the server.",
+        "threats_vulnerabilities": "Users cannot judge a raw IP address, a technical blind spot attackers rely on."
+      },
+      "vulnerability": {
+        "type": "technical",
+        "description": "Domain-reputation controls bypassed"
+      },
+      "mitre": ["T1566.002", "T1204.001"],
+      "it_act": ["43"],
+      "recommendations": ["Legitimate organisations do not send login links to raw IP addresses.", "Block or report the IP to your security team."]
+    },
+    "URL_SHORTENER": {
+      "concepts": {
+        "network_security": "A redirect service hides the final destination from the user and from simple URL filters.",
+        "threats_vulnerabilities": "Removes the user's ability to inspect the link before clicking."
+      },
+      "vulnerability": {
+        "type": "technical",
+        "description": "Destination obscured by redirection"
+      },
+      "mitre": ["T1027", "T1204.001"],
+      "it_act": [],
+      "recommendations": ["Expand short links with a preview service before opening, or avoid them in unexpected emails."]
+    },
+    "URL_LOOKALIKE_DOMAIN": {
+      "concepts": {
+        "network_security": "The attacker registered a domain that looks like a trusted brand so DNS resolves to attacker infrastructure.",
+        "authentication": "Fake login pages on lookalike domains harvest passwords; the domain name is the user's only clue to authenticity.",
+        "threats_vulnerabilities": "Exploits a perception vulnerability: humans read 'paypa1' as 'paypal'.",
+        "cybercrime_law": "Imitating a brand to deceive users is cheating by personation (S.66D)."
+      },
+      "vulnerability": {
+        "type": "human",
+        "description": "Visual similarity of domain names"
+      },
+      "mitre": ["T1583.001", "T1566.002"],
+      "it_act": ["66D"],
+      "recommendations": ["Check the registered domain (the part just before the first single '/') carefully.", "Use bookmarks for banking and important accounts."]
+    },
+    "URL_PUNYCODE": {
+      "concepts": {
+        "network_security": "International domain names (xn--) can contain Cyrillic/Greek letters that look identical to Latin ones.",
+        "cryptography_integrity": "A valid TLS certificate can be issued for the homograph domain, so the padlock gives false assurance.",
+        "threats_vulnerabilities": "Exploits a visual vulnerability that even careful users cannot see."
+      },
+      "vulnerability": {
+        "type": "technical",
+        "description": "Unicode homoglyphs in domain names"
+      },
+      "mitre": ["T1583.001", "T1566.002"],
+      "it_act": ["66D"],
+      "recommendations": ["Configure browsers to display punycode.", "Type the official address yourself."]
+    },
+    "URL_EXCESSIVE_SUBDOMAINS": {
+      "concepts": {
+        "network_security": "DNS is read right-to-left: in 'bank.com.secure.evil.ru' the real domain is 'evil.ru'; the brand on the left is decoration."
+      },
+      "vulnerability": {
+        "type": "human",
+        "description": "Reading domains left-to-right"
+      },
+      "mitre": ["T1566.002"],
+      "it_act": [],
+      "recommendations": ["Identify the registered domain at the right end of the host name."]
+    },
+    "URL_SUSPICIOUS_TLD": {
+      "concepts": {
+        "network_security": "Cheap or free TLDs are disproportionately used for throw-away phishing infrastructure."
+      },
+      "vulnerability": {
+        "type": "technical",
+        "description": "Low-cost disposable domain infrastructure"
+      },
+      "mitre": ["T1583.001"],
+      "it_act": [],
+      "recommendations": ["Treat unexpected links to unusual TLDs (.xyz, .top, .click, ...) with extra suspicion."]
+    },
+    "URL_AT_SYMBOL": {
+      "concepts": {
+        "network_security": "URL syntax treats text before '@' as user-info, so the browser connects to the host AFTER the '@'.",
+        "authentication": "The trusted-looking name before '@' is fake identity information that is never checked."
+      },
+      "vulnerability": {
+        "type": "technical",
+        "description": "Abuse of URL user-info syntax"
+      },
+      "mitre": ["T1566.002", "T1036"],
+      "it_act": ["66D"],
+      "recommendations": ["Never trust a URL containing '@' in the host part."]
+    },
+    "URL_TEXT_MISMATCH": {
+      "concepts": {
+        "cryptography_integrity": "The message misrepresents its own content: what you see is not what you click - an integrity violation of the communication.",
+        "network_security": "The real hyperlink target is different attacker-controlled infrastructure.",
+        "threats_vulnerabilities": "Exploits the habit of trusting the visible text instead of hovering to see the real URL."
+      },
+      "vulnerability": {
+        "type": "human",
+        "description": "Trusting displayed link text"
+      },
+      "mitre": ["T1566.002", "T1204.001", "T1036"],
+      "it_act": ["66D"],
+      "recommendations": ["Hover over links (or long-press on mobile) to see the real address before clicking."]
+    },
+    "URL_LONG_OR_RANDOM": {
+      "concepts": {
+        "network_security": "Long or random URLs obfuscate the destination and help evade signature-based URL filters."
+      },
+      "vulnerability": {
+        "type": "technical",
+        "description": "Filter evasion through obfuscation"
+      },
+      "mitre": ["T1027"],
+      "it_act": [],
+      "recommendations": ["Be cautious with long, unreadable links in unexpected emails."]
+    },
+    "HDR_DISPLAY_NAME_MISMATCH": {
+      "concepts": {
+        "authentication": "The display name is free text and is not authenticated; only the domain can be checked by SPF/DKIM/DMARC.",
+        "cryptography_integrity": "The claimed origin of the message does not match its technical origin.",
+        "cybercrime_law": "Sending as a brand you do not own is personation (S.66D)."
+      },
+      "vulnerability": {
+        "type": "human",
+        "description": "Mail clients show the name, hide the address"
+      },
+      "mitre": ["T1656", "T1566"],
+      "it_act": ["66D"],
+      "recommendations": ["Always expand the sender to see the actual email address."]
+    },
+    "HDR_LOOKALIKE_SENDER": {
+      "concepts": {
+        "authentication": "SPF/DKIM can PASS for a lookalike domain because the attacker owns it - authentication proves the domain, not that it is the real brand.",
+        "network_security": "A typosquatted domain was registered as attack infrastructure.",
+        "cybercrime_law": "Impersonating an organisation via a lookalike domain is cheating by personation (S.66D)."
+      },
+      "vulnerability": {
+        "type": "human",
+        "description": "Visual similarity of domain names"
+      },
+      "mitre": ["T1583.001", "T1656"],
+      "it_act": ["66D"],
+      "recommendations": ["Compare the sender domain letter-by-letter with the organisation's official domain."]
+    },
+    "HDR_REPLY_TO_MISMATCH": {
+      "concepts": {
+        "authentication": "The Reply-To header is never authenticated; it silently routes your answer to the attacker.",
+        "cia_triad": "Any sensitive reply (bank details, documents) goes to an unintended party - a confidentiality breach."
+      },
+      "vulnerability": {
+        "type": "technical",
+        "description": "Unauthenticated Reply-To header"
+      },
+      "mitre": ["T1656"],
+      "it_act": ["66D"],
+      "recommendations": ["Check where your reply will actually go before sending sensitive information."]
+    },
+    "HDR_RETURN_PATH_MISMATCH": {
+      "concepts": {
+        "authentication": "SPF authenticates the Return-Path (envelope) domain, not the visible From domain; a mismatch weakens what SPF proves (DMARC alignment fixes this)."
+      },
+      "vulnerability": {
+        "type": "technical",
+        "description": "Envelope sender differs from visible sender"
+      },
+      "mitre": ["T1566"],
+      "it_act": [],
+      "recommendations": ["Treat as a weak signal; combine with SPF/DKIM/DMARC results."]
+    },
+    "HDR_SPF_FAIL": {
+      "concepts": {
+        "authentication": "SPF (Sender Policy Framework) failed: the sending server is not authorised by the claimed domain.",
+        "network_security": "SPF is a DNS-published allow-list of sending IP addresses; the message came from outside it."
+      },
+      "vulnerability": {
+        "type": "technical",
+        "description": "Spoofed sending infrastructure"
+      },
+      "mitre": ["T1566", "T1656"],
+      "it_act": ["66D"],
+      "recommendations": ["Do not trust the sender identity of a message that failed SPF.", "Domain owners should publish SPF with '-all' and enforce DMARC."]
+    },
+    "HDR_DKIM_FAIL": {
+      "concepts": {
+        "cryptography_integrity": "DKIM is a digital signature (RSA/Ed25519 over a hash of headers and body). Failure means the message was not signed by the domain or was modified.",
+        "authentication": "The domain's cryptographic proof of origin is missing or invalid."
+      },
+      "vulnerability": {
+        "type": "technical",
+        "description": "Missing / broken cryptographic origin proof"
+      },
+      "mitre": ["T1566"],
+      "it_act": [],
+      "recommendations": ["Treat the content and origin as unverified."]
+    },
+    "HDR_DMARC_FAIL": {
+      "concepts": {
+        "authentication": "DMARC failed: neither SPF nor DKIM produced an authenticated domain aligned with the visible From address - strong evidence of spoofing.",
+        "cryptography_integrity": "The visible sender identity is not backed by any valid signature or authorised server."
+      },
+      "vulnerability": {
+        "type": "technical",
+        "description": "Domain spoofing"
+      },
+      "mitre": ["T1566", "T1656"],
+      "it_act": ["66D"],
+      "recommendations": ["Report the message; organisations should set DMARC policy to quarantine/reject."]
+    },
+    "HDR_FREEMAIL_ORG": {
+      "concepts": {
+        "authentication": "Free webmail accounts need no proof of identity; the claimed organisational identity is unverified.",
+        "threats_vulnerabilities": "Exploits the assumption that an official-sounding name means an official sender.",
+        "cybercrime_law": "Posing as an official or executive is personation (S.66D)."
+      },
+      "vulnerability": {
+        "type": "human",
+        "description": "Assuming official names imply official senders"
+      },
+      "mitre": ["T1656"],
+      "it_act": ["66D"],
+      "recommendations": ["Banks, government departments and companies use their own domains, not Gmail/Yahoo."]
+    },
+    "ATT_DANGEROUS_EXT": {
+      "concepts": {
+        "endpoint_security": "The file executes code on the endpoint when opened - the main route for malware and ransomware.",
+        "cia_triad": "Malware can steal data (C), modify files (I) and encrypt/destroy them (A, ransomware).",
+        "access_control": "Code runs with the logged-in user's privileges; admin users give it full control.",
+        "cybercrime_law": "Introducing a computer contaminant/virus is covered by S.43 and, if done fraudulently, S.66."
+      },
+      "vulnerability": {
+        "type": "technical",
+        "description": "Endpoint allows user-launched executables"
+      },
+      "mitre": ["T1566.001", "T1204.002"],
+      "it_act": ["43", "66"],
+      "recommendations": ["Never open executable or script attachments from email.", "Organisations should block these types at the mail gateway.", "Work as a standard (non-admin) user."]
+    },
+    "ATT_DOUBLE_EXT": {
+      "concepts": {
+        "endpoint_security": "Windows hides known extensions by default, so 'invoice.pdf.exe' displays as 'invoice.pdf'.",
+        "threats_vulnerabilities": "Exploits a default OS setting (technical) and trust in document file types (human)."
+      },
+      "vulnerability": {
+        "type": "technical",
+        "description": "Hidden file extensions by default"
+      },
+      "mitre": ["T1036.007", "T1204.002"],
+      "it_act": ["43", "66"],
+      "recommendations": ["Enable 'Show file name extensions' in your OS.", "Do not open the file."]
+    },
+    "ATT_MACRO_OFFICE": {
+      "concepts": {
+        "endpoint_security": "VBA macros run code once the user clicks 'Enable Content', commonly downloading further malware.",
+        "access_control": "Macro policy is an access-control decision: Office should block macros from internet-origin files.",
+        "cia_triad": "A malware loader threatens all three CIA properties."
+      },
+      "vulnerability": {
+        "type": "human",
+        "description": "User enables macros when prompted"
+      },
+      "mitre": ["T1566.001", "T1059.005", "T1204.002"],
+      "it_act": ["43", "66"],
+      "recommendations": ["Never click 'Enable Content'/'Enable Macros' on emailed documents.", "Block macros from the internet via Group Policy."]
+    },
+    "ATT_ARCHIVE": {
+      "concepts": {
+        "endpoint_security": "Archives (especially password-protected ones) hide their contents from anti-malware scanners.",
+        "cia_triad": "May contain ransomware threatening data availability."
+      },
+      "vulnerability": {
+        "type": "technical",
+        "description": "Scanner evasion through compression/encryption"
+      },
+      "mitre": ["T1027", "T1566.001"],
+      "it_act": ["43"],
+      "recommendations": ["Do not extract archives from unexpected senders.", "A password given in the same email is a red flag."]
+    },
+    "ATT_MAGIC_MISMATCH": {
+      "concepts": {
+        "cryptography_integrity": "The file's real content (magic bytes) contradicts its declared type - the file is not what it claims to be.",
+        "endpoint_security": "Disguised executables bypass extension-based filters and user caution.",
+        "cybercrime_law": "Deliberately disguised malicious files indicate intent (S.43 / S.66)."
+      },
+      "vulnerability": {
+        "type": "technical",
+        "description": "Filters that trust file extensions"
+      },
+      "mitre": ["T1036", "T1566.001", "T1204.002"],
+      "it_act": ["43", "66"],
+      "recommendations": ["Do not open the file; submit its SHA-256 hash to your security team.", "Use content-based (not extension-based) file filtering."]
+    }
+  }
+}

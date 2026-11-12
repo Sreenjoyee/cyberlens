@@ -1,0 +1,10 @@
+From: HDFC Bank InstaAlerts <alerts@hdfcbank.net>
+To: rahul.verma@example.com
+Subject: OTP for your online transaction
+
+Dear Rahul Verma,
+
+482913 is the OTP for your transaction of Rs 1,250 at BOOKSTORE. Valid for 5 minutes.
+Do not share this OTP with anyone. HDFC Bank never asks for your OTP, PIN or password.
+
+HDFC Bank
